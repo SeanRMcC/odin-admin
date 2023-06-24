@@ -1,3 +1,13 @@
+*{
+   font-family: Roboto;
+   box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("./assets/Roboto.ttf");
+}
+
 html,
 body{
     height: 100%;
@@ -6,7 +16,7 @@ body{
 
 body{
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 300px 1fr;
     grid-template-areas:
         "side-bar header"
         "side-bar content";
@@ -15,6 +25,52 @@ body{
 .side-bar{
     grid-area: side-bar;
     background-color: blue;
+    display: grid;
+    align-items: space-between;
+    padding: 20px;
+    grid-template-rows: repeat(3, min-content);
+    gap: 50px;
+}
+
+.side-bar-content{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 15px;
+}
+
+.side-bar-content > li{
+    font-size: 1.25rem;
+}
+
+.side-bar-content > li > img{
+    width: 25px;
+    height: auto;
+}
+
+li{
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: start;
+    gap: 15px;
+    grid-template-columns: min-content 1fr;
+}
+
+.title-wrapper{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+}
+
+#logo{
+    width: 80px;
+    height: auto;
+}
+
+#title{
+    font-size: 2rem;
+    font-weight: 800;
 }
 
 .header{
