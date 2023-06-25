@@ -112,7 +112,6 @@ li{
 
 .search > img{
     width: 25px;
-    display: auto;
 }
 
 .profile{
@@ -176,4 +175,31 @@ img:hover{
 .content{
     grid-area: content; 
     background-color: orange;
+    display: grid;
+    padding: 30px 20px;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.projects{
+    grid-row: 1 / 3;
+    border: 3px solid black;
+}
+
+.announcements{
+    border: 3px solid purple;
+}
+
+.trending{
+    border: 3px solid olive;
+}
+
+.icon{
+    width: 25px;
+    height: auto;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
